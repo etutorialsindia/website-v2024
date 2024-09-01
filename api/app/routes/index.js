@@ -1,10 +1,7 @@
 import { Router } from "express";
+import { ExpressRoute } from "../utils/index.js";
+import {default as defaultController} from "../controller/index.js"
 
 const router = Router();
-router.use("/api/v1", (req, res) => {
-  res.status(500).json({
-    status: "error",
-    message: "Ban jane do pehle",
-  });
-});
+router.use("/api/v1", ExpressRoute(defaultController));
 export default router;

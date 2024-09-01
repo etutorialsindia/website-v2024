@@ -3,11 +3,12 @@ import cors from "cors";
 import fileUpload from "express-fileupload";
 import pureIP from "express-pureip";
 import routes from "./routes/index.js";
+import mongoose from "mongoose";
 
-
-const port =process.env.port;
 
 (async () => {
+  const port =process.env.port;
+  await mongoose.connect(process.env.mongodb);  
   const app = express();
   app
     .set("view-engine", "twig")
