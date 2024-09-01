@@ -7,4 +7,5 @@ export {default as MemberZone} from "./MemberZone"
 export {default as Navbar} from "./Navbar"
 export {default as Social} from "./Social"
 export {default as SubscribePushNotification} from "./SubscribePushNotification"
+export {default as Section} from "./Section"
 export * as Form from "./form";

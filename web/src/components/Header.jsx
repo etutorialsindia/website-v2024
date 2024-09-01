@@ -12,10 +12,10 @@ export default function Header() {
 		<header className={headerActive ? "active" : "inactive"}>
 			<div className="logo-area">
 				<Logo />
-				<a onClick={toggleNavbar} className="hamburger">
+				<button onClick={toggleNavbar} className="hamburger">
 					<i className="fa-solid fa-bars"></i>
 					<i className="fa fa-times"></i>
-				</a>
+				</button>
 			</div>
 			<Navbar />
 			<MemberZone />

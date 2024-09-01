@@ -5,7 +5,7 @@ export default class API {
     // #endpoint = "https://etut-api.home.mbizcard.in";
     #endpoint=window.location.origin;
     constructor(endpoint="") {
-        if(endpoint !=""){
+        if(endpoint !==""){
             this.#endpoint=endpoint;
         }
     }
@@ -15,7 +15,7 @@ export default class API {
             method: t,
             headers: this.#headers
         };
-        return s && (t.body = JSON.stringify(s)),
+    return s && (t.body = JSON.stringify(s)) &&
             (await fetch(`${this.#endpoint}${e}`, t)).json()
     }
     async get(e) {

@@ -1,4 +1,4 @@
-import { Routes, Route, useRoutes } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 // import Visitor from "../pages/Visitor";
 import { Home, About, Courses, Contact, Policy, FAQ, User,Admin } from "../pages";
 import StopWatch from "../pages/StopWatch"

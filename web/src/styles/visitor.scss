@@ -3,6 +3,8 @@
 }
 .content{
     min-height: calc( 100vh - 80px );
+    display: grid;
+    gap:60px;
 }
 .resolution{
     position: fixed;

@@ -41,8 +41,8 @@ export default function Category(){
     function onSearch(e){
         const api=new API(endpoint);
         let params={}
-        if(searchParams.url != "" )params.url=searchParams.url;
-        if(searchParams.name != "" )params.name=searchParams.name;
+        if(searchParams.url !== "" )params.url=searchParams.url;
+        if(searchParams.name !== "" )params.name=searchParams.name;
         api.post("",params).then(resp=>{
             if(resp.status==="success"){
                 setCategories(resp.data)

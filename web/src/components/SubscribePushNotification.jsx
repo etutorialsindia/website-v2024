@@ -22,7 +22,7 @@ async function getVapidKey(){
 function urlB64ToUint8Array(base64String) {
     const padding = '='.repeat((4 - base64String.length % 4) % 4);
     const base64 = (base64String + padding)
-    .replace(/\-/g, '+')
+    .replace(/-/g, '+')
     .replace(/_/g, '/');
     const rawData = window.atob(base64);
     const outputArray = new Uint8Array(rawData.length);
@@ -62,9 +62,9 @@ export default function SubscribePushNotification(){
         return setSubscribed(await checkSubscription());
     }
     return(<>
-{(subscribed==0)?
+{(subscribed===0)?
     "":
-    (subscribed==1)?
+    (subscribed===1)?
         <button onClick={subscribe} className="btn btn-primary">Subscribe</button>:
         <button onClick={unsubscribe} className="btn btn-primary">Unsubscribe</button>}
     </>)

@@ -7,7 +7,7 @@ export default function Image(attr){
     img=img.split(".");
     img.pop();
     temp.push(img.join("."));
-    let imgsrc=temp.join("/");    
+    // let imgsrc=temp.join("/");    
     if(!!attr.className)return (<picture>
         {/* <source srcset={imgsrc+".webp"} type="image/webp" />
         <source srcset={imgsrc+".jpg"} type="image/jpeg" />

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "../../components/Image";
 import "../../styles/home-features.scss";
+import { Section } from "../../components";
 
 const features = [
 	{
@@ -43,12 +44,13 @@ function Feature(attr) {
 export default function Features() {
 	return (
 		<>
-		<h2>We cover every aspect of education</h2>
+		<Section title="We cover every aspect of education">
 			<div className="features">
 				{features.map((feature, index) => (
 					<Feature key={"feature" + index} {...feature} />
 				))}
 			</div>
+		</Section>
 		</>
 	);
 }

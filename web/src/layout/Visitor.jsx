@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { Footer, Header, SubscribePushNotification } from "../components";
+import { Footer, Header} from "../components";
 import "../styles/visitor.scss";
 export default function Home() {
 	const [sticky,setSticky]=React.useState(false);
@@ -21,12 +21,11 @@ export default function Home() {
 	return (
 		<div className={(sticky?"fixed":"")}>
 			<Header  />
-			{/* <SubscribePushNotification /> */}
 			<div className="content">
 				<Outlet />
 			</div>
 			<Footer />
-			{/* <span className="resolution">{resolution}</span> */}
+			<span className="resolution">{resolution}</span>
 		</div>
 	);
 }
