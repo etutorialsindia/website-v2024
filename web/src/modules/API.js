@@ -3,20 +3,20 @@ export default class API {
         "Content-Type": "application/json"
     };
     // #endpoint = "https://etut-api.home.mbizcard.in";
-    #endpoint=window.location.origin;
-    constructor(endpoint="") {
-        if(endpoint !==""){
-            this.#endpoint=endpoint;
+    #endpoint = window.location.origin;
+    constructor(endpoint = "") {
+        if (endpoint !== "") {
+            this.#endpoint = endpoint;
         }
     }
     async execute(e, t = "GET", s = null) {
-        
+
         t = {
             method: t,
             headers: this.#headers
         };
-    return s && (t.body = JSON.stringify(s)) &&
-            (await fetch(`${this.#endpoint}${e}`, t)).json()
+        s && (t.body = JSON.stringify(s))
+        return (await fetch(`${this.#endpoint}${e}`, t)).json()
     }
     async get(e) {
         return this.execute(e)

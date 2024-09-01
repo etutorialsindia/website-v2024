@@ -15,10 +15,12 @@ function Category(category) {
 export default function Categories() {
 	const [data, setData] = React.useState([]);
 	React.useEffect(() => {
-		const api = new API("/api/v1/categories");
-		api.get("").then(resp => {
+		const api = new API("/api/v1");
+		console.log(api)
+		api.get("/categories").then(resp => {
+			console.log(resp);
 			if ("data" in resp) setData(resp.data)
-		})
+		}).catch(e=>{console.log(e);})
 	}, [])
 	return (
 		<>
