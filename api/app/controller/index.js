@@ -1,3 +1,5 @@
+export {default as CategoryController} from "./Category.js";
+export {default as CourseController} from "./Course.js"
 export default function(_){
     return Object.freeze({
         status:502,
