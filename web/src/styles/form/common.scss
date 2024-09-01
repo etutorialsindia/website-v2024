@@ -1,0 +1,107 @@
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form {
+        box-shadow: 0 0 10px var(--primary);
+        padding: 40px;
+        border-radius: 10px;
+        background: var(--secondary-background);
+        color: var(--secondary);
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .title {
+            font-size: 24px;
+            text-align: center;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column-reverse;
+            // padding:5px;
+            position: relative;
+            border: 2px solid var(--primary-background);
+            &.blank {
+                input {
+                    &:not([type=radio]) ~ label {
+                        left: 0px;
+                        top: 0px;
+                        height: 100%;
+                        border-radius:0px;
+                    }
+                }
+            }
+            input {
+                background-color: var(--secondary);
+                border: none;
+                padding: 5px 10px;
+                &:not([type=radio]) ~ label {
+                    position: absolute;
+                    background-color: var(--primary-background);
+                    color: var(--primary);
+                    padding: 0 10px;
+                    display: flex;
+                    z-index: 1;
+                    font-weight: bold;
+                    font-size: 12px;
+                    justify-content: center;
+                    align-items: center;
+                    transition: 1s;
+                    left: 10px;
+                    top: -10px;
+                    height: 15px;
+                    border-radius:5px;
+                }
+                &:not([type=radio]):focus {
+                    outline: none;
+                    & ~ label {
+                        left: 10px;
+                        top: -10px;
+                        height: 15px;
+                        border-radius:0px;
+                    }
+                }
+            }
+            .label {
+                position: absolute;
+                background-color: var(--primary-background);
+                color: var(--primary);
+                padding: 0 10px;
+                display: flex;
+                z-index: 1;
+                font-weight: bold;
+                font-size: 12px;
+                justify-content: center;
+                align-items: center;
+                transition: 1s;
+                left: 10px;
+                top: -10px;
+                height: 15px;
+                border-radius: 5px;
+            }
+            .options{
+                color:var(--secondary);
+                display: inline-flex;
+                flex-wrap: wrap;
+                gap:10px;
+                justify-content: space-between;
+                padding:10px 10px 5px;
+            }
+        }
+        .form-group-links {
+            display: flex;
+            justify-content: space-between;
+            a {
+                text-decoration: none;
+                color: var(--secondary);
+            }
+        }
+        input {
+            background: var(--secondary-background);
+        }
+        [type="checkbox"],
+        [type="radio"] {
+            margin-right: 10px;
+        }
+    }
+}

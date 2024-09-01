@@ -1,0 +1,34 @@
+:root{
+    --primary:#000;
+    --primary-background:#B8F4FF;
+    --secondary-background:rgb(46, 98, 109);
+    --secondary-background-transparent:rgba(89, 163, 177,0.6);
+    --secondary:#d9f9ff;
+    --primary-button-background:var(--secondary-background-transparent);
+    --secondary-button-background:var(--primary);
+    --secondary-button:var(--primary-background);
+}
+body{
+    background-color: var(--primary-background);
+}
+*{
+    margin:0px;
+}
+.btn{
+    border-radius:5px;
+    padding:5px;
+    border:none;
+}
+.btn-primary{
+    background-color: var(--primary-button-background);
+    color:var(--secondary);
+    font-weight:bold;
+    &:hover{
+        background-color: var(--secondary-button-background);
+        color:var(--secondary-button)
+    }
+}
+.content{
+    padding:20px;
+    text-align: justify;
+}

@@ -4,3 +4,4 @@ docker-compose.yml
 old
 api/node_modules
 publish.sh
+plan.md

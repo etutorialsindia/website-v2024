@@ -1,11 +1,21 @@
-import React from "react"
-import ReactDom from "react-dom"
-
-let rootElement=document.querySelector("#root");
-if(!rootElement){
-    rootElement=document.createElement("root");
-    rootElement.id="root"
-    document.body.appendChild(rootElement);
-}
-const root=ReactDom.createRoot(rootElement);
-root.render(<>It works</>);
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import {BrowserRouter} from "react-router-dom";
+import "./styles/index.scss"
+import RouteList from './routes/RouteList';
+(()=>{
+    let rootElement=document.getElementById('root');
+    if(!rootElement){
+      rootElement=document.createElement("div");
+      rootElement.setAttribute("id","root");
+      document.body.appendChild(rootElement)
+    }
+    const root = ReactDOM.createRoot(rootElement);
+    root.render(
+    <React.StrictMode>
+      <BrowserRouter>
+        <RouteList />
+      </BrowserRouter>
+    </React.StrictMode>
+  );
+  })();

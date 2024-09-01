@@ -1,0 +1,85 @@
+.course-cards{
+    padding:20px;
+    display: grid;
+    justify-content: space-around;
+    gap:20px;
+    grid-template-columns: 1fr;
+    @media screen and (min-width:480px){
+            grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (min-width:1024px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media screen and (min-width:1600px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    @media screen and (min-width:1920px){
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    @media screen and (min-width:2560px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    @media screen and (min-width:3840px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .card{
+        border-radius:10px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        position:relative;
+        box-shadow: 0 0 10px black;
+        padding:10px;
+        min-width:200px;
+        max-width:500px;
+        background-color: var(--secondary);
+        &:hover{
+            box-shadow:0 0 20px black;
+            background-color: var(--primary-background);
+        }
+        .name{
+            position: absolute;
+            top:0;
+            right:0;
+            left:0;
+            text-align: center;
+            background-color: var(--secondary-background-transparent);
+            font-size:24px;
+            display:flex;
+            font-weight: bold;
+            justify-content: center;
+            padding:10px 0;
+            color:var(--secondary);
+        }
+        .image-container{
+            width:100%;
+            overflow:hidden;
+            max-height:200px;
+            img{
+                width:100%;
+            }
+        }
+        .info{
+            padding:5px;
+            color: var(--primary);
+            background-color:var(--primary-background);
+            display: flex;
+            justify-content: space-between;
+        }
+        .classinfo{
+            margin-top:-10px;
+            background-color: var(--secondary-background);
+            color:var(--secondary);
+            font-weight:bold;
+            display:flex;
+            justify-content: space-between;
+            padding:5px;
+        }
+        .actions{
+            margin-top:10px;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+    }
+}

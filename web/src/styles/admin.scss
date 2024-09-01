@@ -1,0 +1,39 @@
+@import url("./form/common.scss");
+body{
+    // background-color: bisque;
+    .admin.container{
+        background-color: #fff;
+        padding:10px;
+        border-radius:10px;
+        box-shadow: 0 0 10px ;
+        display: flex;
+        flex-direction: column;
+        .endpoint{
+            padding:10px;
+            .form-group{
+                display: flex;
+                flex-direction: column-reverse;
+
+            }
+            background-color: bisque;
+            display:grid;
+            .methods{
+                padding:10px 0 0 0;
+                display:flex;
+                justify-content: space-between;
+            }
+        }
+        gap:20px;
+        .active{
+            filter:invert(1)
+        }
+    }
+}
+button{
+    padding:5px;
+    border-radius:5px;
+    border-style:inset;
+    &:hover{
+        border-style:outset;
+    }
+}
