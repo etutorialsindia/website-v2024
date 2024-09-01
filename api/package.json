@@ -1,0 +1,29 @@
+{
+  "name": "express-js-server",
+  "version": "1.0.0",
+  "description": "A boilerplate setup for expressjs application development",
+  "main": "app/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app/server.js",
+    "dev": "node app/server.js --watch"
+  },
+  "keywords": [
+    "express",
+    "express-module",
+    "expressjs-server",
+    "express-server-module"
+  ],
+  "author": "Om Prakash Tiwari <optiwari.india@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-fileupload": "^1.5.1",
+    "express-pureip": "^1.0.0",
+    "express-rate-limit": "^7.4.0",
+    "mongoose": "^8.5.4",
+    "twig": "^1.17.1"
+  }
+}
