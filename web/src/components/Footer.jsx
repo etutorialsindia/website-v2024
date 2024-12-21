@@ -5,7 +5,7 @@ import FooterNavbar from "./FooterNavbar";
 import "../styles/footer.scss";
 export default function Footer() {
 	const message =
-		"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos hic deleniti cumque iure laborum voluptatum obcaecati modi voluptates quod culpa!";
+		"Founded by Mr. Om Prakash Tiwari, who brings 18 years of industry experience and over 8 years of teaching expertise, eTutorials is committed to delivering education that bridges the gap between theoretical knowledge and real-world application. Mr. Tiwari has personally worked on more than 18 large-scale projects, ensuring that our courses are not only academically rigorous but also practically relevant.";
 	return (
 		<footer>
 			<div className="top">

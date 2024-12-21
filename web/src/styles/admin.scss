@@ -29,11 +29,3 @@ body{
         }
     }
 }
-button{
-    padding:5px;
-    border-radius:5px;
-    border-style:inset;
-    &:hover{
-        border-style:outset;
-    }
-}

@@ -12,11 +12,6 @@ const data=[
         icon:"fa-brands fa-youtube"
     },
     {
-        name:"Linkedin",
-        target:"https://www.linkedin.com/company/10048725",
-        icon:"fa-brands fa-linkedin"
-    },
-    {
         name:"Whatsapp",
         target:"https://wa.me/919311150364",
         icon:"fa-brands fa-whatsapp"
@@ -24,7 +19,7 @@ const data=[
 ];
 function Link(social){
     return (<li>
-        <a href={social.target} title={social.name}><i className={social.icon}></i></a>
+        <a target="_blank" rel="noreferrer" href={social.target} title={social.name}><i className={social.icon}></i></a>
     </li>);
 }
 export default function Social(){

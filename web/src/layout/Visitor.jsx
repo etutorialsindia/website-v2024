@@ -4,10 +4,10 @@ import { Footer, Header} from "../components";
 import "../styles/visitor.scss";
 export default function Home() {
 	const [sticky,setSticky]=React.useState(false);
-	const [resolution,setResolution]=React.useState(`${window.innerWidth} x ${window.innerHeight}`)
+	// const [resolution,setResolution]=React.useState(`${window.innerWidth} x ${window.innerHeight}`)
 	React.useLayoutEffect(()=>{
 		function updateResolution(){
-			setResolution(`${window.innerWidth} x ${window.innerHeight}`)
+			// setResolution(`${window.innerWidth} x ${window.innerHeight}`)
 		}
 		window.addEventListener("resize",updateResolution);
 		window.addEventListener("scroll",(e)=>{
@@ -25,7 +25,7 @@ export default function Home() {
 				<Outlet />
 			</div>
 			<Footer />
-			<span className="resolution">{resolution}</span>
+			{/* <span className="resolution">{resolution}</span> */}
 		</div>
 	);
 }

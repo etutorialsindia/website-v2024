@@ -9,8 +9,9 @@ export default function Home() {
 		<>
 			<Banner />
 			<Categories />
-			<Courses />
 			<Features />
+			<Courses />
+			{/* <a href="//tube.optiwari.duckdns.org">Tube Link</a> */}
 		</>
 	);
 }
